@@ -218,6 +218,379 @@
                     
                         <a
                             class="link-unstyled"
+                            href="../../../2019/10/21/OOP/"
+                            aria-label=": OOP"
+                        >
+                            OOP
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2019-10-21T20:30:25+09:00">
+	
+		    Oct 21, 2019
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h1 id="OOP-1"><a href="#OOP-1" class="headerlink" title="OOP_1"></a>OOP_1</h1><blockquote>
+<p>이 글은, OOP의 큰 개념들을 설명하는 글이다. 복습하는 차원으로 정리한 것이</p>
+<p>Author: J-Kyu</p>
+</blockquote>
+<h2 id="Programming"><a href="#Programming" class="headerlink" title="Programming"></a>Programming</h2><ul>
+<li>Program의 구성<ul>
+<li>Interface: 공개된 사용자 중심의 기능/역활</li>
+<li>Implementation: 프로그래머 중심의 구현 사항</li>
+</ul>
+</li>
+</ul>
+<h2 id="Object-Oriented-Programming"><a href="#Object-Oriented-Programming" class="headerlink" title="Object Oriented Programming"></a>Object Oriented Programming</h2><ul>
+<li>Oriented Object Programming은 program의 module로 class 사용한다.</li>
+<li>&lt;C++, from the GROUND UP&gt; 책을 참고하면  OOP를 다음과 같이 설명했다.<ul>
+<li>“In general , when programming in an aobject-oriented fashion, you <strong>decompose a problem</strong> into its constituent parts. Each component becomes a self-contained obejct that contains its <strong>own instructions and data</strong> related to that obejct. Through this process, complexity is reduced and you can manage larger programs.”</li>
+<li>즉, OOP는 문제 해결을 위해서 문제를 분해하는데, 이때 이 분해된 문제들을 Object로 정의하고, 그 Object에는 자신들만의 instructions와  data가 존재하는 하여 문제를 해결하는 것을 말한다.</li>
+</ul>
+</li>
+<li>Client and Server<ul>
+<li>Client는 Class를 사용하는 program의 역할이다</li>
+<li>Server는 Class의 역할이다</li>
+</ul>
+</li>
+</ul>
+<h2 id="Procedural-Programming"><a href="#Procedural-Programming" class="headerlink" title="Procedural Programming"></a>Procedural Programming</h2><ul>
+<li>Procedural Programming은 program의  module을  fucntion 혹은  procedural을 사용한다</li>
+<li>문제 해결을 위해 분해과정을 거친다. 여기서는  <strong>Top-Down</strong> 방식으로 접근을 하며,  Functional Decomposition을 통해서 해결한다. <ul>
+<li><strong>Top-Down (Functional Decomposition)</strong><ul>
+<li>장점: 직관적이고 순서에 맞추어 개발한다</li>
+<li>단점: software 유지보수의 측면에서 시스템 검사, 오류 수정, 업그레이드 등에 어려움</li>
+</ul>
+</li>
+<li><strong>Cascading Changes</strong><ul>
+<li><em>main</em> procedure의 변화가 sub procedure에 영향을 준다.</li>
+<li>program의 유지 보수에 어려움이 있다</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Abstract-Data-Type"><a href="#Abstract-Data-Type" class="headerlink" title="Abstract Data Type"></a>Abstract Data Type</h2><ul>
+<li>프로그램은 <em>Interface</em>와 <em>Implementation</em>으로 나눠져있다고 앞에서 언급했다. 이때 <em>Interface</em>는  <strong>User</strong>에게 공개가 되어 필요시 활용할 수가 있다. 반대로  <em>Implementation</em>의 정보는 <strong>Programmer</strong>에게 필요한 정보로, 구지 모든 사용자에게 공개 될 필요가 없다. 고로 이러한 내용을 은닉하기 위해서 ADT(Abstraction Data Type)로 간주한다. <ul>
+<li>예를 들어, 앱개발을 위해서 Firebase API가 활용한다고 하자. Firebase의 공식 홈페이지에서는 어떤 프레임워크에 어떻한 API를 제공해주는지 명시가 되어있다. 해당 API를 활용하는 User는 사실상 활용하자고 하는 API interface만 필요한다. 왜냐하면 User가 원하는 것은 Firebase  DB에 접근을 하여 data를 가져오고 저장하는 것이 주 목적이기 때문이다. Implementation의 관심은 User Programmer가 아닌 Firebase Programmer에게 있을 것이다. Firebase Programmer는 해당 Interface의  Implementation을 개선을 위해서 알아야할 필요가 있다. 고로 공개가 된 Interface와 달리 Implementation은 ADT로 가주되어 은닉되는 것이다.</li>
+</ul>
+</li>
+<li><strong>Information Hiding</strong>과 <strong>Ecapsulation</strong>을 통해서 지원이 된다.</li>
+</ul>
+<h2 id="Encapsulation"><a href="#Encapsulation" class="headerlink" title="Encapsulation"></a>Encapsulation</h2><ul>
+<li>&lt;C++, from the GROUND UP&gt; 을 따르면, “Encapsulation is a programming mechansim that <strong>binds together code and the data</strong> it manipulates and that keeps both <strong>safe</strong> from outside interface and misuse……an object is the device that support encapsulation”.</li>
+<li>Object에서는 encapsulation을 지원한다고 한다. Object의 data는 Public과 Private로 설정하여 접근 범위를 제한 할 수 있는데, 이떄 이것을 통해서 data와 code의 접근을 적절하게 막음으로서 불필요한 error를 필할 수 있다. </li>
+<li>즉, Code와 Data를 하나로 구성하고, 접근제한을 통해 외부로 부터 오용을 막는 것을 <em>Encapsulation</em> 이라고 한다</li>
+</ul>
+<h2 id="Inheritance-amp-Model"><a href="#Inheritance-amp-Model" class="headerlink" title="Inheritance &amp; Model"></a>Inheritance &amp; Model</h2><ul>
+<li><p>하나의  Object가 다른 Object의 특성을 <strong>이어받게</strong> 해주는 성질이다.</p>
+<ul>
+<li>마치 폭포수가 밑으로 떨어지는 것 처럼, 윗물의 성질을 아랫물이 받는 것이다. 하지만 반대로  아랫물의 성질은 윗물이 받을 수는 없다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><ul>
+<li>OOP에서는 “many methods with the same signature”라고 한다. 또한 <em>Polymorphism</em>은 “having many forms”로 해석도 된다.</li>
+<li>&lt;C++, from the GROUND UP&gt; 를 참고하면, “Polymorphism is the quality that allows <strong>one interface to be used for a general class of actions</strong>. The speicific  action is determined by the exact nature of the situation”<ul>
+<li>하나의 inteface는 여러개의 implementations에 대해서 사용할 수 있다고 한다. 뒤에서 나올 이야기이지만 <em>Overriding</em>과  <em>Overloading</em>의 특성을 뜻하기도 한다. </li>
+<li>즉, 하나의 Interface에 대해서 여러개의 implemenation이 존재할 수 있다는 것. (구분은 paratemetr의 갯수와 type혹은 호출 class를 통해서 될 수 있다)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Interface-amp-Component"><a href="#Interface-amp-Component" class="headerlink" title="Interface &amp; Component"></a>Interface &amp; Component</h2><ul>
+<li>Header file을 보면 해당 class의 component(변수와 함수)들은 Public과 Private으로 나눠저 있는 것을 알 수 있다. Header file 또한 하나의 interface이다. 그리고 그 component는 다음과 같이 접근이 제한이 되며 구분된다.<ul>
+<li>public: 상위 레벨 method</li>
+<li>private: 하위 레벨 method + 상위 레벨 method를 지원하는 데이터 멤버</li>
+</ul>
+</li>
+<li>이러한 Interface의 활용은 Java에서는 <em>interface</em>, C++에서는 <em>abstract base classs</em>로 나타난다. <ul>
+<li>프로그래머가 Afreeca TV 시뮬레이션 프로그램을 만들었다고 가정합시다. Afreeca_TV라는 class는 Muckbang_Bj와  Game_Bj class의  base class입니다.  또한 Afreeca_TV에는 starReaction()이라는, 별풍을 받았을시 BJ의 Reaction을 하는 함수가 존재합니다.</li>
+<li>시청자가 Game_Bj로 선언된 대도서관BJ(Object)님의 방송을 시청하다가 별풍을 쐈습니다. 그러면 starReaction()을 호출하게 되는데, 이때 Game_Bj에서 재정의한 (Override)한 starReaction() 호출되어 Mubkbang_Bj의  starReaction() 다른 성질의 함수가 호출되는 것입니다.</li>
+<li>물론 starReaction()의 함수의 Declaration은  base class인 Afreeca_TV에 되어 있지만, <em>Abstract Class</em>이며  startReaction()은 <em>virtual fuction</em>이기에 derive class인 Muckbang_Bj과  Game_Bj에서는 각 class에서 정의한 (overriding) 함수가 호출되는 것입니다. 구지 각각의  class에 따로 정의하고 선언하지 않고 base class에서 선언하여 <em>abstract class</em>로 정의하는 이유는, 별풍을 받고 처리하는 것은 Afreeca_TV class에서 담당을 하기 때문에, 그리고 상속받는 bj들의 class에 모두 공통으로 적용되기 떄문에 사용하는 것입니다.</li>
+<li>정리하면, <em>virtaul function</em>은 base class에서 선언은 되지만, 그 정의는 derive  class에서 되는 것입니다. </li>
+</ul>
+</li>
+</ul>
+<h2 id="Namesapce"><a href="#Namesapce" class="headerlink" title="Namesapce"></a>Namesapce</h2><ul>
+<li>Name conflict를 피하기 위해서 제공된다</li>
+<li>프로그램을 작성하다보면 동시에 동일한 이름의 변수 혹은 함수가 존재할 수 있다. 이러한 conflict을 방지하기 위해서 Namespace를 통해서 구분한다.</li>
+<li>Scope Resolution 사용 “ :: “</li>
+</ul>
+<h2 id="C-features"><a href="#C-features" class="headerlink" title="C++ features"></a>C++ features</h2><ul>
+<li><p>c++에서도  type cast를 할 수 있는데 c와는 다른 방법으로 casting이된다</p>
+<ul>
+<li><p><strong>static_cast</strong></p>
+<ul>
+<li><p>일반적인 타입변환을 할때 사용이된다</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> average = <span class="keyword">static_cast</span>&lt;<span class="keyword">float</span>&gt;(hits)/<span class="keyword">static_cast</span>&lt;<span class="keyword">float</span>&gt;(at_base);</span><br><span class="line"><span class="comment">//static_cast&lt;target-type&gt; (source expression)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>const_cast</strong></p>
+<ul>
+<li><p>상수 타입을 변환할 때 사용되는데, const 객체에 대한 포인터를 <strong>const가 아닌 객체의 포인터로 변환</strong>할 때 사용된다.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> nsmaespace <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">int</span>* <span class="title">find</span><span class="params">(<span class="keyword">int</span> val, <span class="keyword">const</span> <span class="keyword">int</span>*, <span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> * ptr;</span><br><span class="line">    ptr = <span class="keyword">const_cast</span>&lt;<span class="keyword">int</span>*&gt;(find(<span class="number">4</span>,a,<span class="number">3</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>dynamic_cast</strong></p>
+<ul>
+<li>여러 타입에 대하여 동시에 적용되도록 하거나, inheritance hierachy 내에서 사용하기 위한 타입 변환</li>
+</ul>
+</li>
+<li><p><strong>reinterpret_cast</strong></p>
+<ul>
+<li>다른 타입의 <strong>포인터로 변환</strong>하거나 <strong>포인터 타입을 정수</strong> 타입으로 변환</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">float</span> f = <span class="number">-6.9072</span>;</span><br><span class="line"><span class="comment">//다른 타입의 포인터로 변환</span></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> * p = <span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">unsigned</span> <span class="keyword">char</span>*&gt;(&amp;f);</span><br><span class="line"><span class="comment">//포인터 타입을 정수 타입으로 변환</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(<span class="keyword">float</span>); i++)&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(p[i]) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="String-Function"><a href="#String-Function" class="headerlink" title="String Function"></a>String Function</h2><ul>
+<li><h2 id="cout-lt-lt-cin"><a href="#cout-lt-lt-cin" class="headerlink" title="cout &lt;&lt; cin"></a>cout &lt;&lt; cin</h2></li>
+<li><p>Manipulator</p>
+<ul>
+<li>setw: 필드의 폭을 설정</li>
+<li>setfill: 공백을 특정 문자로 지정</li>
+<li>setprecision: 소수점 이하 지리수 지정</li>
+<li>left, right: 왼쪽, 오른쪽 정렬</li>
+<li>showpoint: 0 포함 소수점 출력</li>
+<li>dec, oct, hex: 10, 8, 16 진수 출력</li>
+</ul>
+</li>
+</ul>
+<h2 id="call-by-reference"><a href="#call-by-reference" class="headerlink" title="call by reference"></a>call by reference</h2><ul>
+<li><p>call by reference는 parameter의 type이 pointer가 아닌 주소인 ‘&amp;’로 선언된 변수로 주소를 받는다.  Pointer로 받는 것과는 개념이 다르다. </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*1*/</span>fun(<span class="keyword">int</span> &amp; a)&#123; <span class="built_in">cout</span> &lt;&lt; a &#125;</span><br><span class="line"><span class="comment">/*2*/</span>fun(<span class="keyword">int</span> *a )&#123;count &lt;&lt; a &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>1 번과 2번의 차이는 변수 a인데, 2번의 a는 8 byte 주소를 담는  pointer이기 때문에,  argument주소를 포인팅하는 pointer 변수로 a는 memory에 새롭게 자리를 차지한다. 반면, 1번의 변수 a의 주소를 argument로 들어오는 변수의 주소로 갖는 변수이다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="return-by-reference"><a href="#return-by-reference" class="headerlink" title="return by reference"></a>return by reference</h2><ul>
+<li>반환시, <em>Temporary Storage</em>에 copy되지 않고 반환하는 것을 말한다. </li>
+</ul>
+<h2 id="inline-function-amp-macro-function"><a href="#inline-function-amp-macro-function" class="headerlink" title="inline function &amp; macro function"></a>inline function &amp; macro function</h2><ul>
+<li>inline functions: 호출 절차보다 본체의 길이가 짧을 때, 루프문 안에서 함수 호출시 속도를 높이기 위해, 소스상에서 함수 호출이 적을 경우 사용한다</li>
+<li>Macro  fucntion: 인자의 타입 검사가 불필요할때, C와 호환성을 필요로 할때</li>
+</ul>
+<h2 id="default-argument"><a href="#default-argument" class="headerlink" title="default argument"></a>default argument</h2><ul>
+<li><p>argument의 deafult value를 설정할 수 있다. default  argument는 항상 가장 오른쪽 부터 설정해야한다. 즉 순서가 중요하다는 것. </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fo</span><span class="params">(<span class="keyword">int</span> a =<span class="number">10</span>, <span class="keyword">int</span> b )</span></span>&#123;...&#125;    </span><br><span class="line"><span class="comment">//fo(30);을 호출하게 되면 30의 값이 어느 변수에 삽입되는지 알 수 없기 떄문이다</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="overloading-function"><a href="#overloading-function" class="headerlink" title="overloading function"></a>overloading function</h2><ul>
+<li>같은 이름의 함수가 multiple definition일때, overloading 개념을 사용하여 Function Signature을 통해 구분하여 호출 할 수 있다.<ul>
+<li>function signature은 이름, 인자의 수 타입, 순서로 구성이 된다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="new-amp-delete"><a href="#new-amp-delete" class="headerlink" title="new &amp; delete"></a>new &amp; delete</h2><ul>
+<li>new: 메모리 할당하여 해당 데이터 타입에 대한 포인터를 반환할 때 사용된다.</li>
+<li>delete: 할당 받은 메모리를 시스템에 반환할 떄 사용된다</li>
+</ul>
+<h2 id="Exception-Handling"><a href="#Exception-Handling" class="headerlink" title="Exception Handling"></a>Exception Handling</h2><ul>
+<li><p>비정상적 상태에서 발생된 run-time error를 처리하기 위해서 사용된다</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//예외가 발생할 수 있는 코드</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(<span class="keyword">int</span> x)&#123;</span><br><span class="line">    <span class="comment">//발생된 int를 처리하는 코드</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (<span class="keyword">char</span> x)&#123;</span><br><span class="line">    <span class="comment">// 발생된 char를 처리하는 코드</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>용어<ul>
+<li><em>throw</em>: 예외 발생</li>
+<li>unexpected: catch block으로 처리되지 않는 exception에 대한 default handler ( error message 추력후  program 종료)</li>
+<li><em>assertion</em>: condition fail시 메시지와 함께 종료 (debugging 목적)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h2><ul>
+<li><p>object 초기화 함수로, public method이며 overloading이 가능하며, default argument를 갖을 수 있다.</p>
+</li>
+<li><p><strong>Default Constructor</strong></p>
+<ul>
+<li>parameter가 없는 상태로, 기본적으로 제공되는 생성자이다. 하지만 default  constructor가 다음 2가지에 대해서 예외로 다른 방법으로 존재할 수 있다<ol>
+<li>직접 default constructor를 제공하는 경우</li>
+<li>class가  public이 아닌 default constructor를 선언한다면, 컴파일러는 public default constructor를 제공하지 않는다…??</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Parameter Constructor</p>
+<ul>
+<li><p><strong>Copy Constructor</strong></p>
+<ul>
+<li><p>다른 객체의 값을 복사하여 새로운 객체를 생성한다. ojbect를 value로 간주하여  pass할때  copy constructor가 암묵적으로 사용되는 것 이다</p>
+</li>
+<li><p>하나 이상의 매개변수를 가질 수 있으나 첫번째 다음의 모든 매개변수는 <strong>default</strong> 값을 가져야 한다</p>
+</li>
+<li><p>또한, 사용자가 copy constructor를 제공하지 않는다면 시스템이 제공한다</p>
+</li>
+<li><p>시스템은 원래의 각 데이터 멤버를 copy할 object의 대응되는 데이터 멤버에 copy한다</p>
+</li>
+<li><p>만약 특정 class에 대해서 copy constructor를 사용하지 않기 원하는 경우, copy constructor를 private로 선언하면, 해당 object는 “call by value”를 통해 parameter에 전달될 때 방지 할 수 있다. </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> C&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	C();</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	C(C&amp;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(C)</span></span>;</span><br><span class="line"><span class="function">C <span class="title">g</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    C c1, c2;</span><br><span class="line">    f(c1);	<span class="comment">//copy constructor를 private해놓았기에 error가 남</span></span><br><span class="line">    c2 = g();<span class="comment">//copy constructor를 private해놓았기에 error가 남</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(C object)</span></span>&#123;...&#125;</span><br><span class="line"><span class="function">C <span class="title">g</span><span class="params">()</span></span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Convert Constructor</strong></p>
+<ul>
+<li>해당 type이 아닌 class를 해당 객체로 변환할 때 사용된다. 단, 하나의 인자만 갖는다</li>
+<li>function overloading 대안으로 사용이 가능하다.</li>
+<li>2가지 방법으로 constructor를 표현이 가능하다<ul>
+<li>Implicit: type conversion constructor를 제공한다는 것이다. 따로 explicit으로 선언을 하지않으면 Implicit으로 적용된다</li>
+<li>Explicit: Explicit을 constructor 앞에 선언하는 경우 convert constructor를 묵시적으로 금지한다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//implicit</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Person</span>&#123;</span></span><br><span class="line">        <span class="keyword">public</span>:</span><br><span class="line">            Person() &#123;name = <span class="string">"Unknown"</span>;&#125;<span class="comment">//defualt constructor</span></span><br><span class="line">            Person(<span class="keyword">const</span> <span class="built_in">string</span> &amp;n) &#123;name = n;&#125;<span class="comment">//convert constructor</span></span><br><span class="line">            Person(<span class="keyword">const</span> <span class="keyword">char</span>* n)&#123;name = n;&#125;<span class="comment">//convert constructor</span></span><br><span class="line">        <span class="keyword">private</span>:</span><br><span class="line">            <span class="built_in">string</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(Person p)</span></span>&#123;...&#125;; <span class="comment">// 함수 f가 인자로 객체 사용</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">string</span> s = <span class="string">"Turandot"</span>; </span><br><span class="line">        f(s);	<span class="comment">//Person이 아닌 string</span></span><br><span class="line">        <span class="comment">/*여기서 s는 string이고 f()의 parameter type은 Person이다. 둘의 type은 다리지만 Person의 convert Constructor 덕분에 string type인 s가 문제 없이 전달될 수 있다	*/</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//explicit</span></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Person</span>&#123;</span></span><br><span class="line">        <span class="keyword">public</span>:</span><br><span class="line">        	<span class="comment">//명시적으로 변환 constructor를 표시</span></span><br><span class="line">        	<span class="function"><span class="keyword">explicit</span> <span class="title">Person</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span> &amp;n)</span></span>&#123;name = n&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(Person p)</span></span>&#123;...&#125;; <span class="comment">// 함수 f가 인자로 객체 사용</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="built_in">string</span> s = <span class="string">"Turandot"</span>; </span><br><span class="line">        f(s);	<span class="comment">// Error가 나온다. b/c implicitly convert constructor가 막혀있기 때무에, 오직 type이 Person인 객체만 받을 수 있다</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Constructor Initializers</p>
+<ul>
+<li><p><em>const</em> 데이터 멤버는 초기화 constructor가 아닌 다른 방법으로는 초기화가 될 수 없다</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//const Data 초기화 하는 방법</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	C(): c(<span class="number">0</span>) &#123; x = <span class="number">-1</span>;&#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    	<span class="keyword">int</span> x;</span><br><span class="line">    	<span class="keyword">const</span> <span class="keyword">int</span> c;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Deconstructor"><a href="#Deconstructor" class="headerlink" title="Deconstructor"></a>Deconstructor</h2><ul>
+<li>class에 속하는 object가 소멸될 때 자동적으로 호출되는 함수</li>
+<li>class 타입의 변수가 유효 범위를 벗어날 때나 delete를 사용하여 class 타입의 동적 할당 기억 장소를 반환할 때, destructor가 자동적으로 수행한다</li>
+<li>특징<ul>
+<li>인자와 반환 타입을 갖지 않음</li>
+<li>class당 최대 하나만 존재</li>
+<li>class 이름 앞에 ~ 추가</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
+<li><em>static function</em>: class 자신과 연관된 멤버 및 method를 제공할때 static을 사용한다<ul>
+<li>static으로 선언된 멤버들은 같은 static 멤버만 접근이 가능하다</li>
+<li>static 멤버는 전역이기에 모든 object에 의해서 공유가 된다</li>
+</ul>
+</li>
+<li><em>const parameter</em>: cons parameter는 원치 않는 변경 연산이 수행되는 것을 사전에 막을 수 있고 컴파일러에 최적화를 효율적으로 수행한다</li>
+<li><em>const method</em>: method가 object의 data member를 변경하지 않는다면, 그 method를 const로 선언한다</li>
+</ul>
+<h2 id="Accessibility-of-DC-Members"><a href="#Accessibility-of-DC-Members" class="headerlink" title="Accessibility of DC Members"></a>Accessibility of DC Members</h2><table>
+<thead>
+<tr>
+<th>Access Specifier</th>
+<th>Accessibility</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Public</td>
+<td>누구나 접근 허용</td>
+</tr>
+<tr>
+<td>Protected</td>
+<td>상속받은 class만 접근 허용</td>
+</tr>
+<tr>
+<td>Private</td>
+<td>같은 클래스에서만 접근 허용</td>
+</tr>
+</tbody></table>
+<h2 id="Name-Hiding"><a href="#Name-Hiding" class="headerlink" title="Name Hiding"></a>Name Hiding</h2><ul>
+<li><p>derived class가 base class와 같은 이름의 method를 추가하는 경우</p>
+<ul>
+<li><p>추가된 method는 base class의 method를 은닉한다.</p>
+</li>
+<li><p>동일한 method의 구분은 namespace를 통해서 한다</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BC</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    	<span class="function"><span class="keyword">void</span> <span class="title">h</span><span class="params">(<span class="keyword">float</span>)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DC</span>:</span> <span class="keyword">public</span> BC&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">h</span><span class="params">(<span class="keyword">char</span> [])</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    DC h1;</span><br><span class="line">    d1.h(<span class="string">"Boffo!"</span>);</span><br><span class="line">    d1.h(<span class="number">707.7</span>);	<span class="comment">//여기서는 Error가 난다..b/c DC::h가 BC::h를 은닉했기 때문이다</span></span><br><span class="line">    d1.BC::h(<span class="number">707.7</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Constructors-amp-Deconstructor-Under-Inheritance"><a href="#Constructors-amp-Deconstructor-Under-Inheritance" class="headerlink" title="Constructors &amp; Deconstructor Under Inheritance"></a>Constructors &amp; Deconstructor Under Inheritance</h2><ul>
+<li><p>derive class의 constructor가 호출되면 base class의  constructor도 호출이 된다. 이때, base class의 default constructor가 없다면 derived class constructor는 base constructor를 명시적으로 호출해야한다</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BC</span> &#123;</span></span><br><span class="line"><span class="comment">// base class</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		BC() &#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"BC::BC() executes...\n"</span>; &#125;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DC</span> :</span> <span class="keyword">public</span> BC &#123;</span><br><span class="line"><span class="comment">// derived class</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		DC() &#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"DC::DC() executes...\n"</span>; &#125;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="keyword">int</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	DC d;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Output:</span></span><br><span class="line"><span class="comment">		BC::BC() executes...</span></span><br><span class="line"><span class="comment">		DC::DC() executes...*/</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Rules</strong><ul>
+<li>DC가 constructor를 가지지만 BC가 constructor를 갖지 않는 경우,<ul>
+<li>DC 객체가 생성될 때마다 적절한 DC constructor가 자동적으로 실행</li>
+</ul>
+</li>
+<li>DC가 constructor를 갖지 않고 BC가 constructor를 가지는 경우,<ul>
+<li>BC는 default constructor를 가져야 하고, BC의 default constructor는 DC 객체가 생성될 때마다 자동적으로 실행</li>
+</ul>
+</li>
+<li>DC가 constructor를 가지고 BC가 default constructor를 갖는 경우, <ul>
+<li>적절한 DC constructor가 초기화 부분에서 다른 BC constructor를 호출하지 않으면 BC의 default constructor는 DC 객체가 생성될 때마다 자동적<br>으로 실행 </li>
+</ul>
+</li>
+<li>DC와 BC가 constructor를 가지지만 BC가 default constructor를 갖지 않는 경우, <ul>
+<li>DC constructor는 초기화 부분에서 BC constructor를 명시적으로 호출해야 한다. 그러면, DC 객체가 생성될 때마다 자동적으로 실행됨</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Multiple-Inheritance-VS-Single-Inheritance"><a href="#Multiple-Inheritance-VS-Single-Inheritance" class="headerlink" title="Multiple Inheritance VS Single Inheritance"></a>Multiple Inheritance VS Single Inheritance</h2><ul>
+<li>Single Inheritance Hierarchy<ul>
+<li>derived class는 그 base class가 표현하는 일반화된 데이터 타입을 specializtion하거나 refinement를 하는것</li>
+</ul>
+</li>
+<li>Multiple Inheritance Hierachy<ul>
+<li>derived class가 base class들의 combination을 표현</li>
+</ul>
+</li>
+</ul>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="../../../2019/10/21/OOP/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="../../../2019/10/20/test/"
                             aria-label=": test"
                         >
